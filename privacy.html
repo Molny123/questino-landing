@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zásady ochrany osobních údajů — Questino</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #1a1a2e; color: #fff; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a href="/" class="text-2xl font-black text-yellow-400 tracking-tight">Questino</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="max-w-3xl mx-auto px-6 py-12 space-y-10 text-white/80 leading-relaxed">
+
+    <h1 class="text-3xl font-black text-white">Zásady ochrany osobních údajů</h1>
+    <p class="text-white/50 text-sm">Platné od: 1. září 2026</p>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-extrabold text-yellow-400">1. Kdo jsme</h2>
+      <p>
+        Questino je mobilní webová aplikace (PWA) určená pro sledování každodenních úkolů dětí.
+        Provozovatelem je fyzická osoba — tvůrce aplikace. Kontakt: <a href="mailto:info@questino.cz" class="text-yellow-400 hover:underline">info@questino.cz</a>.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-extrabold text-yellow-400">2. Jaké údaje shromažďujeme</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>
+          <strong class="text-white">E-mailová adresa rodiče</strong> — pouze pokud se rodič dobrovolně zaregistruje
+          pro zálohu dat nebo obnovu PINu. Registrace není povinná.
+        </li>
+        <li>
+          <strong class="text-white">Anonymní identifikátor zařízení</strong> — automaticky vytvořený UUID
+          bez vazby na osobní údaje. Slouží k uložení dat do cloudu.
+        </li>
+        <li>
+          <strong class="text-white">Data aplikace</strong> — seznam úkolů, odměn a history plnění.
+          Tato data jsou uložena lokálně v prohlížeči (localStorage) a volitelně synchronizována
+          do cloudového úložiště (Supabase). Neobsahují žádné osobní údaje dítěte.
+        </li>
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-extrabold text-yellow-400">3. Proč údaje zpracováváme</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Přihlášení rodiče do rodičovského nastavení</li>
+        <li>Záloha dat aplikace napříč zařízeními</li>
+        <li>Obnova rodičovského PINu</li>
+      </ul>
+      <p>Žádné jiné účely. Žádný marketing. Žádné profilování.</p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-extrabold text-yellow-400">4. Co s údaji neděláme</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Nikdy neprodáváme osobní údaje třetím stranám.</li>
+        <li>Nikdy nesdílíme údaje s reklamními sítěmi.</li>
+        <li>Neukládáme žádné osobní údaje dítěte (jméno dítěte je uloženo pouze lokálně v prohlížeči).</li>
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-extrabold text-yellow-400">5. Třetí strany</h2>
+      <p>
+        Využíváme cloudovou službu <strong class="text-white">Supabase</strong> (hostováno v EU)
+        pro autentizaci a synchronizaci dat. Supabase zpracovává data v souladu s GDPR.
+        Více informací: <a href="https://supabase.com/privacy" class="text-yellow-400 hover:underline" target="_blank" rel="noopener">supabase.com/privacy</a>.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-extrabold text-yellow-400">6. Vaše práva (GDPR)</h2>
+      <p>Pokud jste zaregistrovaný uživatel, máte právo:</p>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong class="text-white">Přístup</strong> — požádat o výpis vašich údajů</li>
+        <li><strong class="text-white">Oprava</strong> — požádat o opravu nesprávných údajů</li>
+        <li><strong class="text-white">Výmaz</strong> — požádat o smazání vašeho účtu a všech dat</li>
+        <li><strong class="text-white">Přenositelnost</strong> — obdržet data v strojově čitelném formátu</li>
+        <li><strong class="text-white">Odvolání souhlasu</strong> — kdykoliv bez udání důvodu</li>
+      </ul>
+      <p>
+        Pro uplatnění práv napište na: <a href="mailto:info@questino.cz" class="text-yellow-400 hover:underline">info@questino.cz</a>.
+        Odpovíme do 30 dnů.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-extrabold text-yellow-400">7. Cookies</h2>
+      <p>
+        Aplikace nepoužívá žádné sledovací cookies ani analytické nástroje třetích stran.
+        Využíváme pouze technické úložiště prohlížeče (localStorage) nezbytné pro fungování aplikace.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-extrabold text-yellow-400">8. Kontakt</h2>
+      <p>
+        Dotazy k ochraně osobních údajů zasílejte na:
+        <a href="mailto:info@questino.cz" class="text-yellow-400 hover:underline">info@questino.cz</a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-8 px-6 mt-10">
+    <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-white/40 text-sm">
+      <span>© 2026 Questino</span>
+      <div class="flex gap-6">
+        <a href="/" class="hover:text-white/70 transition-colors">Zpět na hlavní stránku</a>
+        <a href="mailto:info@questino.cz" class="hover:text-white/70 transition-colors">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

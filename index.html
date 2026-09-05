@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questino — Úkoly, které děti plní rády</title>
+  <meta name="description" content="Questino proměňuje každodenní povinnosti v dobrodružství. Úkoly, streaky a odměny pro děti i rodiče." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#1a1a2e',
+              surface: '#16213e',
+              yellow: '#FFD700',
+              yellowHover: '#f5c800',
+            }
+          },
+          fontFamily: {
+            display: ['system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #1a1a2e; color: #fff; }
+    .hero-gradient {
+      background: radial-gradient(ellipse at 60% 0%, rgba(255,215,0,0.08) 0%, transparent 60%);
+    }
+  </style>
+</head>
+<body class="font-display antialiased">
+
+  <!-- NAV -->
+  <nav class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+    <span class="text-2xl font-black text-yellow-400 tracking-tight">Questino</span>
+    <a
+      href="https://luky-quest.netlify.app"
+      class="px-5 py-2 bg-yellow-400 text-[#1a1a2e] font-extrabold rounded-xl text-sm hover:bg-yellow-300 transition-colors"
+    >
+      Začít zdarma
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-gradient max-w-5xl mx-auto px-6 pt-12 pb-20 text-center">
+    <h1 class="text-3xl sm:text-5xl font-black text-white leading-tight mb-5 max-w-3xl mx-auto">
+      Úkoly, které děti plní rády.<br class="hidden sm:block" />
+      Návyky, které zůstanou.<br class="hidden sm:block" />
+      <span class="text-yellow-400">Odměny, které stojí za to.</span>
+    </h1>
+    <p class="text-white/60 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
+      Questino je appka která proměňuje každodenní povinnosti v dobrodružství. Pro děti i rodiče.
+    </p>
+    <a
+      href="https://luky-quest.netlify.app"
+      class="inline-block px-10 py-4 bg-yellow-400 text-[#1a1a2e] font-extrabold text-lg rounded-2xl shadow-lg hover:bg-yellow-300 active:scale-95 transition-all"
+    >
+      Začít →
+    </a>
+
+    <!-- App screenshot placeholder -->
+    <div class="mt-14 mx-auto max-w-xs sm:max-w-sm bg-white/5 border border-white/10 rounded-2xl aspect-[9/16] flex items-center justify-center text-white/30 text-sm">
+      Screenshot appky
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="bg-[#16213e] py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-black text-white text-center mb-12">Jak to funguje</h2>
+      <div class="grid sm:grid-cols-3 gap-8">
+
+        <div class="text-center">
+          <div class="text-5xl mb-4">👨‍👩‍👧</div>
+          <h3 class="text-yellow-400 font-extrabold text-lg mb-2">Rodič nastaví</h3>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Za 5 minut nastavíš úkoly, odměny a PIN. Appka je připravená.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="text-5xl mb-4">⚡</div>
+          <h3 class="text-yellow-400 font-extrabold text-lg mb-2">Dítě plní</h3>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Každý den dítě plní úkoly a buduje streak. Gamifikace motivuje přirozeně.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="text-5xl mb-4">🏆</div>
+          <h3 class="text-yellow-400 font-extrabold text-lg mb-2">Odměny motivují</h3>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Za splněné dny dítě získává odměny které jsi vybral. Žádné hádky.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY QUESTINO -->
+  <section class="py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-black text-white text-center mb-12">Proč Questino</h2>
+      <div class="grid sm:grid-cols-3 gap-6">
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+          <div class="text-3xl mb-3">🤝</div>
+          <h3 class="font-extrabold text-white mb-2">Méně hádek</h3>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Jasná pravidla a odměny snižují konflikty o povinnosti.
+          </p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+          <div class="text-3xl mb-3">🌱</div>
+          <h3 class="font-extrabold text-white mb-2">Návyky na celý život</h3>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Každodenní rutina buduje samostatnost a zodpovědnost.
+          </p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+          <div class="text-3xl mb-3">🚀</div>
+          <h3 class="font-extrabold text-white mb-2">Žádná registrace nutná</h3>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Začni ihned, email pouze pro zálohu dat.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="bg-[#16213e] py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-black text-white text-center mb-12">Co říkají rodiče</h2>
+      <div class="grid sm:grid-cols-3 gap-6">
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
+          <p class="text-white/30 text-sm italic">Recenze bude brzy doplněna.</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <div class="w-9 h-9 rounded-full bg-white/10"></div>
+            <div>
+              <div class="w-20 h-2 bg-white/10 rounded"></div>
+              <div class="w-14 h-2 bg-white/5 rounded mt-1"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
+          <p class="text-white/30 text-sm italic">Recenze bude brzy doplněna.</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <div class="w-9 h-9 rounded-full bg-white/10"></div>
+            <div>
+              <div class="w-20 h-2 bg-white/10 rounded"></div>
+              <div class="w-14 h-2 bg-white/5 rounded mt-1"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
+          <p class="text-white/30 text-sm italic">Recenze bude brzy doplněna.</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <div class="w-9 h-9 rounded-full bg-white/10"></div>
+            <div>
+              <div class="w-20 h-2 bg-white/10 rounded"></div>
+              <div class="w-14 h-2 bg-white/5 rounded mt-1"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 px-6 text-center">
+    <h2 class="text-2xl sm:text-3xl font-black text-white mb-4">Vyzkoušej Questino zdarma</h2>
+    <p class="text-white/60 mb-8">Žádná registrace. Funguje v prohlížeči na tabletu i mobilu.</p>
+    <a
+      href="https://luky-quest.netlify.app"
+      class="inline-block px-10 py-4 bg-yellow-400 text-[#1a1a2e] font-extrabold text-lg rounded-2xl shadow-lg hover:bg-yellow-300 active:scale-95 transition-all"
+    >
+      Začít →
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#16213e] border-t border-white/10 py-8 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-white/40 text-sm">
+      <span>© 2026 Questino</span>
+      <div class="flex gap-6">
+        <a href="/privacy.html" class="hover:text-white/70 transition-colors">Zásady ochrany osobních údajů</a>
+        <a href="mailto:info@questino.cz" class="hover:text-white/70 transition-colors">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
