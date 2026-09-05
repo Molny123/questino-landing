@@ -65,9 +65,36 @@
       Začít →
     </a>
 
-    <!-- App screenshot placeholder -->
-    <div class="mt-14 mx-auto max-w-xs sm:max-w-sm bg-white/5 border border-white/10 rounded-2xl aspect-[9/16] flex items-center justify-center text-white/30 text-sm">
-      Screenshot appky
+    <!-- App screenshots showcase -->
+    <div class="mt-14 flex items-end justify-center gap-4">
+      <!-- Side: rewards — hidden on mobile -->
+      <div class="hidden sm:block w-36 flex-shrink-0 self-end pb-4">
+        <img
+          src="images/02-rewards.png"
+          alt="Odznaky a odměny v Questino"
+          class="w-full rounded-2xl shadow-2xl shadow-black/60 ring-1 ring-white/10 opacity-80"
+          style="transform: rotate(-3deg) translateY(8px);"
+        />
+      </div>
+
+      <!-- Center: main checklist — always visible -->
+      <div class="w-56 sm:w-64 flex-shrink-0">
+        <img
+          src="images/01-checklist.png"
+          alt="Denní checklist úkolů v Questino"
+          class="w-full rounded-2xl shadow-2xl shadow-black/70 ring-2 ring-yellow-400/30"
+        />
+      </div>
+
+      <!-- Side: settings — hidden on mobile -->
+      <div class="hidden sm:block w-36 flex-shrink-0 self-end pb-4">
+        <img
+          src="images/03-rodic.png"
+          alt="Rodičovské nastavení v Questino"
+          class="w-full rounded-2xl shadow-2xl shadow-black/60 ring-1 ring-white/10 opacity-80"
+          style="transform: rotate(3deg) translateY(8px);"
+        />
+      </div>
     </div>
   </section>
 
