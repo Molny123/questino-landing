@@ -30,6 +30,68 @@
     .hero-gradient {
       background: radial-gradient(ellipse at 60% 0%, rgba(255,215,0,0.08) 0%, transparent 60%);
     }
+
+    /* Carousel */
+    .carousel-outer { position: relative; }
+    .carousel-viewport { overflow: hidden; padding: 12px 0 10px; }
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+    }
+    .carousel-card {
+      flex: 0 0 calc(82% - 10px);
+      opacity: 0.55;
+      transform: scale(0.96);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .carousel-card { flex: 0 0 calc(62% - 10px); }
+    }
+    .carousel-card.active { opacity: 1; transform: scale(1); }
+    .carousel-card-text { color: rgba(255,255,255,0.8); font-size: 0.875rem; line-height: 1.65; flex: 1; }
+    .carousel-card-author { color: #FFD700; font-weight: 800; font-size: 0.875rem; }
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      padding: 0;
+    }
+    .carousel-arrow:hover { background: rgba(255,255,255,0.18); }
+    .carousel-prev { left: 4px; }
+    .carousel-next { right: 4px; }
+    .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
+    .carousel-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      border: none; padding: 0; cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .carousel-dot.active { background: #FFD700; transform: scale(1.35); }
   </style>
 </head>
 <body class="font-display antialiased">
@@ -167,47 +229,46 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="bg-[#16213e] py-20 px-6">
+  <section class="bg-[#16213e] py-20">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl sm:text-3xl font-black text-white text-center mb-12">Co říkají rodiče</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
-          <p class="text-white/80 text-sm leading-relaxed flex-1">„Nastavení trvalo minutu. Oceňuji že to není překombinované — jen úkoly, odměny a streak. Nic víc nepotřebujeme."</p>
-          <p class="text-yellow-400 font-extrabold text-sm">Lenka</p>
+      <h2 class="text-2xl sm:text-3xl font-black text-white text-center mb-12 px-6">Co říkají rodiče</h2>
+      <div class="carousel-outer">
+        <button class="carousel-arrow carousel-prev" aria-label="Předchozí">&#8249;</button>
+        <button class="carousel-arrow carousel-next" aria-label="Následující">&#8250;</button>
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <div class="carousel-card">
+              <p class="carousel-card-text">„Nastavení trvalo minutu. Oceňuji že to není překombinované — jen úkoly, odměny a streak. Nic víc nepotřebujeme."</p>
+              <p class="carousel-card-author">Lenka</p>
+            </div>
+            <div class="carousel-card">
+              <p class="carousel-card-text">„Syn se poprvé v životě sám zeptal jestli může jít uklidit pokoj. Stačí jedno slovo: streak."</p>
+              <p class="carousel-card-author">Petr</p>
+            </div>
+            <div class="carousel-card">
+              <p class="carousel-card-text">„Funguje. Jednoduché, přehledné, dítě to pochopilo samo. Minus jedna hvězda protože bych uvítal notifikace — ale prý přijdou."</p>
+              <p class="carousel-card-author">Martin</p>
+            </div>
+            <div class="carousel-card">
+              <p class="carousel-card-text">„Dcera (8) si sama navrhla nové odměny a teď makáme obě. Nečekala jsem že se z toho stane rodinná věc."</p>
+              <p class="carousel-card-author">Simona</p>
+            </div>
+            <div class="carousel-card">
+              <p class="carousel-card-text">„Začali jsme před třemi měsíci. Dcera má teď 67 denní streak a já jsem přestala řešit úkoly úplně. Stačilo nastavit odměny které ji opravdu baví."</p>
+              <p class="carousel-card-author">Bára</p>
+            </div>
+            <div class="carousel-card">
+              <p class="carousel-card-text">„Solidní appka. Nastavení rychlé, přehled pro rodiče praktický. Dítě spokojené. Víc nepotřebuji."</p>
+              <p class="carousel-card-author">Luboš</p>
+            </div>
+            <div class="carousel-card">
+              <p class="carousel-card-text">„Tři týdny, žádný rozbitý streak. To je u mého syna rekord který jsem nepovažoval za možný. Appka prostě funguje."</p>
+              <p class="carousel-card-author">Roman</p>
+            </div>
+          </div>
         </div>
-
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
-          <p class="text-white/80 text-sm leading-relaxed flex-1">„Syn se poprvé v životě sám zeptal jestli může jít uklidit pokoj. Stačí jedno slovo: streak."</p>
-          <p class="text-yellow-400 font-extrabold text-sm">Petr</p>
-        </div>
-
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
-          <p class="text-white/80 text-sm leading-relaxed flex-1">„Funguje. Jednoduché, přehledné, dítě to pochopilo samo. Minus jedna hvězda protože bych uvítal notifikace — ale prý přijdou."</p>
-          <p class="text-yellow-400 font-extrabold text-sm">Martin</p>
-        </div>
-
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
-          <p class="text-white/80 text-sm leading-relaxed flex-1">„Dcera (8) si sama navrhla nové odměny a teď makáme obě. Nečekala jsem že se z toho stane rodinná věc."</p>
-          <p class="text-yellow-400 font-extrabold text-sm">Simona</p>
-        </div>
-
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
-          <p class="text-white/80 text-sm leading-relaxed flex-1">„Začali jsme před třemi měsíci. Dcera má teď 67 denní streak a já jsem přestala řešit úkoly úplně. Stačilo nastavit odměny které ji opravdu baví."</p>
-          <p class="text-yellow-400 font-extrabold text-sm">Bára</p>
-        </div>
-
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
-          <p class="text-white/80 text-sm leading-relaxed flex-1">„Solidní appka. Nastavení rychlé, přehled pro rodiče praktický. Dítě spokojené. Víc nepotřebuji."</p>
-          <p class="text-yellow-400 font-extrabold text-sm">Luboš</p>
-        </div>
-
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
-          <p class="text-white/80 text-sm leading-relaxed flex-1">„Tři týdny, žádný rozbitý streak. To je u mého syna rekord který jsem nepovažoval za možný. Appka prostě funguje."</p>
-          <p class="text-yellow-400 font-extrabold text-sm">Roman</p>
-        </div>
-
       </div>
+      <div class="carousel-dots"></div>
     </div>
   </section>
 
@@ -234,5 +295,80 @@
     </div>
   </footer>
 
+
+<script>
+(function () {
+  const viewport = document.querySelector('.carousel-viewport');
+  const track = document.querySelector('.carousel-track');
+  const cards = Array.from(track.children);
+  const dotsEl = document.querySelector('.carousel-dots');
+  const prevBtn = document.querySelector('.carousel-prev');
+  const nextBtn = document.querySelector('.carousel-next');
+
+  let current = 0;
+  let autoTimer = null;
+  let touchStartX = 0, touchStartY = 0;
+
+  // Build dots
+  cards.forEach((_, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'carousel-dot';
+    btn.setAttribute('aria-label', 'Recenze ' + (i + 1));
+    btn.addEventListener('click', () => { goTo(i); resetAuto(); });
+    dotsEl.appendChild(btn);
+  });
+  const dots = Array.from(dotsEl.children);
+
+  function render() {
+    const vpW = viewport.offsetWidth;
+    const cardW = cards[0].offsetWidth;
+    const gap = 20;
+    const offset = vpW / 2 - (current * (cardW + gap) + cardW / 2);
+    track.style.transform = 'translateX(' + offset + 'px)';
+    cards.forEach((c, i) => c.classList.toggle('active', i === current));
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function goTo(i) {
+    current = ((i % cards.length) + cards.length) % cards.length;
+    render();
+  }
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+  nextBtn.addEventListener('click', () => { next(); resetAuto(); });
+
+  // Click on non-active card navigates to it
+  cards.forEach((c, i) => {
+    c.addEventListener('click', () => { if (i !== current) { goTo(i); resetAuto(); } });
+  });
+
+  // Touch swipe
+  viewport.addEventListener('touchstart', function (e) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  viewport.addEventListener('touchend', function (e) {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+      dx < 0 ? next() : prev();
+      resetAuto();
+    }
+  }, { passive: true });
+
+  // Auto-play: pause on hover
+  function startAuto() { autoTimer = setInterval(next, 5000); }
+  function resetAuto() { clearInterval(autoTimer); startAuto(); }
+  viewport.addEventListener('mouseenter', function () { clearInterval(autoTimer); });
+  viewport.addEventListener('mouseleave', startAuto);
+
+  window.addEventListener('resize', render);
+
+  render();
+  startAuto();
+})();
+</script>
 </body>
 </html>
