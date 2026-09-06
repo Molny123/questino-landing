@@ -1,0 +1,29 @@
+<svg viewBox="0 0 304 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Questino">
+  <title>Questino</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&amp;display=swap');
+    </style>
+    <linearGradient id="bolt-g" x1="0.6" y1="0" x2="0.3" y2="1">
+      <stop offset="0%"   stop-color="#FFE566"/>
+      <stop offset="100%" stop-color="#FFB800"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Lightning bolt: 30px wide × 60px tall, vertically centred in 80px canvas -->
+  <polygon
+    points="38,10 14,44 24,44 10,70 36,36 26,36"
+    fill="url(#bolt-g)"
+  />
+
+  <!-- Wordmark -->
+  <text
+    x="54"
+    y="57"
+    fill="#FFD700"
+    font-family="'Baloo 2', 'Arial Rounded MT Bold', 'Trebuchet MS', Arial, sans-serif"
+    font-size="46"
+    font-weight="800"
+    letter-spacing="-1"
+  >Questino</text>
+</svg>
