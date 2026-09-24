@@ -265,6 +265,40 @@
     </div>
   </section>
 
+  <!-- HOW IT WORKS -->
+  <section class="bg-[#16213e] py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-black text-white text-center mb-6">Jak fungují úkoly a odměny?</h2>
+      <p class="text-white/70 text-base text-center max-w-2xl mx-auto mb-8 leading-relaxed">
+        Děti plní úkoly spolehlivěji, když samy rozumí pravidlům a cítí se součástí dohody.
+        Okamžitá malá odměna motivuje více než vzdálený příslib. Streak posiluje vnitřní
+        motivaci — dítě nechce přerušit řadu, kterou si samo buduje. Výzkumy potvrzují:
+        když má dítě pocit kontroly a výběru, motivace přichází přirozeně.
+      </p>
+      <div class="carousel-outer" id="how-carousel-outer">
+        <button class="carousel-arrow carousel-prev" aria-label="Předchozí">&#8249;</button>
+        <button class="carousel-arrow carousel-next" aria-label="Následující">&#8250;</button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="how-carousel-track">
+            <div class="carousel-card">
+              <p class="carousel-card-author">📋 Úkoly</p>
+              <p class="carousel-card-text">Úkol musí být konkrétní — dítě musí přesně vědět, kdy je splněný. Úkoly jsou defaultně povinné každý den. Domluvte se s dítětem, které úkoly mohou být přeskočitelné — přeskočitelný úkol lze vynechat bez dopadu na streak.</p>
+            </div>
+            <div class="carousel-card">
+              <p class="carousel-card-author">🏆 Denní odměny</p>
+              <p class="carousel-card-text">Denní odměna je slib rodiče. Nastavte jen odměny, které jste skutečně schopni splnit kdykoliv. Menší a spolehlivé odměny fungují lépe než velké a nejisté.<br><br>Tipy: 🛏️ O půl hodiny déle spát · 🎵 Vyber hudbu v autě · 🎨 Společné tvoření · 📚 Pohádka dle výběru</p>
+            </div>
+            <div class="carousel-card">
+              <p class="carousel-card-author">🔥 Streak odměny</p>
+              <p class="carousel-card-text">Streak odměny jsou větší zážitky za vytrvalost. Ideální streak odměna je něco, na co se dítě těší dlouhodobě.<br><br>Tipy: 🎮 Nová hra · 🏕️ Víkendové kempování · 🏆 Můj den — celý den dle výběru dítěte<br><br>Tip: Nastavte streak odměnu jako tajné překvapení 🎁 — dítě ví, že ho čeká něco velkého, ale neví co.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-dots" id="how-carousel-dots"></div>
+    </div>
+  </section>
+
   <!-- TESTIMONIALS -->
   <section class="py-20">
     <div class="max-w-5xl mx-auto">
@@ -335,12 +369,11 @@
 
 
 <script>
-(function () {
-  const viewport = document.querySelector('.carousel-viewport');
-  const track = document.querySelector('.carousel-track');
-  const dotsEl = document.querySelector('.carousel-dots');
-  const prevBtn = document.querySelector('.carousel-prev');
-  const nextBtn = document.querySelector('.carousel-next');
+function initCarousel(outerEl, dotsEl) {
+  const viewport = outerEl.querySelector('.carousel-viewport');
+  const track = outerEl.querySelector('.carousel-track');
+  const prevBtn = outerEl.querySelector('.carousel-prev');
+  const nextBtn = outerEl.querySelector('.carousel-next');
 
   const origCards = Array.from(track.children);
   const N = origCards.length; // 7 real cards
@@ -425,7 +458,10 @@
 
   setPos(false); // init without animation
   startAuto();
-})();
+}
+
+initCarousel(document.getElementById('how-carousel-outer'), document.getElementById('how-carousel-dots'));
+initCarousel(document.querySelector('.carousel-outer:not(#how-carousel-outer)'), document.querySelector('.carousel-dots:not(#how-carousel-dots)'));
 </script>
 </body>
 </html>
